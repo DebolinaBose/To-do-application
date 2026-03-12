@@ -10,10 +10,10 @@ exports.getAllTodos = async (req, res) => {
 };
 
 exports.createTodo = async (req, res) => {
-    const { title, description } = req.body;
+    const { title, description, priority } = req.body;
     try {
         const [newTodo] = await db('todos')
-            .insert({ title, description })
+            .insert({ title, description, priority })
             .returning('*');
         res.status(201).json(newTodo);
     } catch (error) {
@@ -23,9 +23,9 @@ exports.createTodo = async (req, res) => {
 
 exports.updateTodo = async (req, res) => {
     const { id } = req.params;
-    const { title, description, status } = req.body;
+    const { title, description, status, priority } = req.body;
     try {
-        await db('todos').where({ id }).update({ title, description, status });
+        await db('todos').where({ id }).update({ title, description, status, priority });
         const updatedTodo = await db('todos').where({ id }).first();
         res.json(updatedTodo);
     } catch (error) {

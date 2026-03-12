@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Priority Labels */
+.priority-label { font-size: 0.8rem; padding: 2px 6px; border-radius: 4px; font-weight: bold; margin-top: 4px; display: inline-block; }
+.p1 { background: #e0e0e0; color: #666; } /* Low */
+.p2 { background: #fff3e0; color: #ef6c00; } /* Medium */
+.p3 { background: #ffebee; color: #c62828; } /* High */
