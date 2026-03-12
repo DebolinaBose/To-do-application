@@ -21,9 +21,9 @@ Users can create, view, update, and delete tasks. The application will use a **R
 
 ### Backend
 
-* Runtime: Node.js
-* Framework: Express.js
-* API Type: REST API
+* Runtime: Activepieces Workflow Engine
+* Framework: ActivePieces Flow Builder
+* Automation Type: Workflow Automation
 
 ### Database
 
